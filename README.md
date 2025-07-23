@@ -1,8 +1,11 @@
-# Nuxt Minimal Starter
+# Welcome to NuxtRun
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## What is NuxtRun?
+NuxtRun is a starter template made with Nuxt 4
 
 ## Setup
+
+Node version 22 is recommended
 
 Make sure to install dependencies:
 
