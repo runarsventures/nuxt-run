@@ -5,7 +5,7 @@ NuxtRun is a starter template made with Nuxt 4
 
 ## Setup
 
-Node version 22 is recommended
+Node version 22 and pnpm version 9 is recommended
 
 Make sure to install dependencies:
 
