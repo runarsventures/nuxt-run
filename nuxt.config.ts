@@ -11,6 +11,11 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
+  eslint: {
+    config: {
+      stylistic: true,
+    },
+  },
   shadcn: {
     prefix: '',
     componentDir: './app/components/ui',
