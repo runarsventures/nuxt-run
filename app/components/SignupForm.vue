@@ -35,6 +35,13 @@ const handleSubmit = async () => {
     },
   })
 }
+
+const signInWithGoogle = async () => {
+  await client.signIn.social({
+    provider: 'google',
+    callbackURL: '/dashboard',
+  })
+}
 </script>
 
 <template>
@@ -55,6 +62,7 @@ const handleSubmit = async () => {
               <Button
                 variant="outline"
                 class="w-full"
+                @click="signInWithGoogle"
               >
                 <Icon name="mdi:google" />
                 Sign Up with Google

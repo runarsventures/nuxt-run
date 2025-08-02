@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { GalleryVerticalEnd } from 'lucide-vue-next'
 </script>
 
 <template>
@@ -9,10 +8,11 @@ import { GalleryVerticalEnd } from 'lucide-vue-next'
         href="#"
         class="flex items-center gap-2 self-center font-medium"
       >
-        <div class="bg-primary text-primary-foreground flex size-6 items-center justify-center rounded-md">
-          <GalleryVerticalEnd class="size-4" />
-        </div>
-        Acme Inc.
+        <Icon
+          name="lucide:gallery-vertical-end"
+          size="20"
+        />
+        NuxtRun
       </a>
       <LoginForm />
     </div>
