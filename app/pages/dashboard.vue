@@ -1,16 +1,13 @@
 <template>
   <div class="h-full flex flex-col items-center justify-center gap-6">
     <h1 class="text-4xl font-bold">
-      Welcome {{ session.data?.user?.name }}
+      Welcome {{ user?.name }}
     </h1>
     <div class="flex gap-2">
-      <Button @click="navigateTo('/')">
-        Home
-      </Button>
-      <Button @click="client.signOut()">
+      <Button @click="signOut">
         Sign Out
       </Button>
-      <Button @click="client.deleteUser()">
+      <Button @click="deleteUser">
         Delete User
       </Button>
     </div>
@@ -22,6 +19,15 @@ definePageMeta({
   layout: 'dashboard',
 })
 
-const { client } = useAuth()
-const session = client.useSession()
+const { user, client } = useAuth()
+
+const signOut = async () => {
+  await client.signOut()
+  await navigateTo('/')
+}
+
+const deleteUser = async () => {
+  await client.deleteUser()
+  await navigateTo('/')
+}
 </script>

@@ -12,8 +12,7 @@ const items = [
   },
 ]
 
-const { client } = useAuth()
-const session = client.useSession()
+const { user } = useAuth()
 
 const route = useRoute()
 function isRouteActive(url: string) {
@@ -78,8 +77,8 @@ function isRouteActive(url: string) {
 
     <SidebarFooter>
       <NavUser
-        v-if="session.data?.user"
-        :user="session.data.user"
+        v-if="user"
+        :user="user"
       />
     </SidebarFooter>
     <SidebarRail />

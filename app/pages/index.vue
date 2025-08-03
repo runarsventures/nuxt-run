@@ -11,7 +11,7 @@
         </h1>
       </div>
       <NuxtLink
-        v-if="!session.data?.user"
+        v-if="!isAuthenticated"
         to="/login"
       >
         <Button>
@@ -44,6 +44,5 @@
 </template>
 
 <script setup lang="ts">
-const { client } = useAuth()
-const session = client.useSession()
+const { isAuthenticated } = useAuth()
 </script>

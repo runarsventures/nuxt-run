@@ -60,6 +60,7 @@ const signInWithGoogle = async () => {
               <Button
                 variant="outline"
                 class="w-full"
+                type="button"
                 @click="signInWithGoogle"
               >
                 <Icon name="mdi:google" />

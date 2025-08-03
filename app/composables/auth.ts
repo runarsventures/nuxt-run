@@ -1,12 +1,17 @@
-import type { ClientOptions, InferUserFromClient } from 'better-auth/client'
 import { createAuthClient } from 'better-auth/vue'
+import type { User } from 'better-auth'
 
 export function useAuth() {
-  const authClient = createAuthClient({})
+  const headers = import.meta.server ? useRequestHeaders() : undefined
 
-  const user = useState<InferUserFromClient<ClientOptions> | null>('auth:user', () => null)
+  const authClient = createAuthClient({
+    fetchOptions: {
+      headers,
+    },
+  })
+
   const sessionFetching = import.meta.server ? ref(false) : useState('auth:sessionFetching', () => false)
-
+  const user = useState<User | null>('auth:user', () => null)
   const isAuthenticated = computed(() => user.value !== null)
 
   const fetchSession = async () => {
@@ -14,15 +19,34 @@ export function useAuth() {
       return
     }
     sessionFetching.value = true
+
     const { data } = await authClient.useSession(useFetch)
+
     user.value = data.value?.user || null
+    sessionFetching.value = false
+  }
+
+  const fetchSessionFromServer = async () => {
+    sessionFetching.value = true
+
+    const res = await $fetch('/api/session', { headers })
+
+    if (res?.user) {
+      user.value = {
+        ...res.user,
+        createdAt: new Date(res.user.createdAt),
+        updatedAt: new Date(res.user.updatedAt),
+      }
+    }
+
     sessionFetching.value = false
   }
 
   return {
     client: authClient,
-    user,
     isAuthenticated,
+    user,
+    fetchSessionFromServer,
     fetchSession,
   }
 }
