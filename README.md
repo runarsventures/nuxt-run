@@ -15,6 +15,6 @@ NuxtRun is a modern web app starter template built with **Nuxt 4**, featuring au
 ## 📋 Setup
 
 - **Node.js** 22 (recommended)
-- **pnpm** 9 (recommended)
+- **pnpm** 10 (recommended)
 
 **Happy coding! 🎉**
