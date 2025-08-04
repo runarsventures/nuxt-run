@@ -1,78 +1,20 @@
 # Welcome to NuxtRun
 
-## What is NuxtRun?
-NuxtRun is a starter template made with Nuxt 4
+NuxtRun is a modern web app starter template built with **Nuxt 4**, featuring authentication with Better Auth, database integration with Neon and shadcn/ui components.
 
-## Setup
+## 🛠️ Tech Stack
 
-Node version 22 and pnpm version 9 is recommended
+- **Framework**: [Nuxt 4](https://nuxt.com/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Components**: [shadcn/ui](https://ui.shadcn.com/)
+- **Icons**: [Nuxt Icon](https://nuxt.com/modules/icon)
+- **Authentication**: [Better Auth](https://better-auth.com/)
+- **Database**: [Postgres Neon](https://neon.com/)
+- **ORM**: [Drizzle ORM](https://orm.drizzle.team/)
 
-Make sure to install dependencies:
+## 📋 Setup
 
-```bash
-# npm
-npm install
+- **Node.js** 22 (recommended)
+- **pnpm** 9 (recommended)
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+**Happy coding! 🎉**
