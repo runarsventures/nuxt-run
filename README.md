@@ -2,7 +2,7 @@
 
 NuxtRun is a modern web app starter template built with **Nuxt 4**, featuring authentication with Better Auth, database integration with Neon and shadcn/ui components.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: [Nuxt 4](https://nuxt.com/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
@@ -12,9 +12,13 @@ NuxtRun is a modern web app starter template built with **Nuxt 4**, featuring au
 - **Database**: [Postgres Neon](https://neon.com/)
 - **ORM**: [Drizzle ORM](https://orm.drizzle.team/)
 
-## 📋 Setup
+## Setup
 
 - **Node.js** 22 (recommended)
 - **pnpm** 10 (recommended)
 
-**Happy coding! 🎉**
+## Preview link
+
+https://nuxt-run.runarsventures.workers.dev/
+
+## Happy coding! 🎉
