@@ -20,9 +20,9 @@ export function useAuth() {
     }
     sessionFetching.value = true
 
-    const { data } = await authClient.useSession(useFetch)
+    const { data } = await authClient.getSession()
 
-    user.value = data.value?.user || null
+    user.value = data?.user || null
     sessionFetching.value = false
   }
 
